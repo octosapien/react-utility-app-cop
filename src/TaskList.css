@@ -3,4 +3,20 @@
     padding: 10px; 
     border-radius: 2px;
   }
+
+
+
+
+
+#del1 {
+   
+    color: black;
+    background-color: transparent; 
+    cursor: pointer; 
+    transition: color 0.3s ease-in-out; 
+  
+    &:hover {
+      color: red;
+    }
+  }
   

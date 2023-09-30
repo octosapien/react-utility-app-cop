@@ -7,7 +7,7 @@ function TaskList({ tasks, onDeleteTask }) {
       {tasks.map((task) => (
         <li key={task._id}>
           {task.title}
-          <button onClick={() => onDeleteTask(task._id)}>Delete</button>
+          <button id="del1" onClick={() => onDeleteTask(task._id)}>Delete</button>
         </li>
       ))}
     </ul>
