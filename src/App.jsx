@@ -41,11 +41,27 @@ function App() {
       });
   };
 
+
+  const handleDeleteAllTasks = () => {
+    
+    axios.delete('http://localhost:3001/tasks/all')
+      .then(() => {
+        setTasks([]); 
+      })
+      .catch((error) => {
+        console.error('Error deleting all tasks:', error);
+      });
+  };
+
+
   return (
     <div className="App">
       <h1 id="head1">Todo App</h1>
       <TaskInput onAddTask={handleAddTask} />
       <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} />
+      <button onClick={handleDeleteAllTasks} className="delete-all-button">
+        Delete All
+      </button>
     </div>
   );
 }
